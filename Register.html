@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title> Registration Form </title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  
+  <style>
+   body{
+   padding: 0;
+   font-family: sans-serif;
+   background: #34495e;
+   }
+   
+   .arn {
+   width:300px;
+   padding:40px;
+   position:absolute;
+   top:60%;
+   left:50%;   
+   transform: translate(-50%,-50%);
+   background:#191919;
+   text-align:center;
+   }
+   
+   .aryaan {
+   font-family: Calisto MT;
+   font-weight:500;
+   border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   padding: 14px 50px;
+   width:250px;
+   outline:none;
+   color: #000000;
+   border-radius:24px;   
+   }
+   
+   .arn input[type="email"],.arn input[type="text"],.arn input[type="password"]{
+   border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   border:2px solid #3498db;
+   padding: 14px 10px;
+   width:200px;
+   outline:none;
+   color:black;
+   border-radius:24px;
+   transition:0.25s;
+   }
+   
+   .arn input[type="email"]:focus,.arn input[type="text"]:focus,.arn input[type="password"]:focus{
+   width:280px;
+   border-color: #ff0000;
+   }
+   
+   .arn input[type="Submit"]{
+    border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   border:2px solid #2ecc71;
+   padding: 14px 40px;
+   outline:none;
+   color:black;
+   border-radius:24px;
+   transition:0.25s;
+   cursor:pointer;
+   }
+   
+   .arn input[type="Submit"]:hover{
+   background:#2ecc71;
+   }
+   </style>
+   
+   <script>
+      function validate()
+      {
+ 
+      var password = document.myform.password.value;
+	  var repassword = document.myform.password.value;
+      var name = document.myform.uname.value;
+      var apost = name.indexOf("@");
+      var dpost = name.lastindexOf(".");
+
+            if(password.length<7)
+        {
+           alert("Password must have minimum 7 Characters");
+           return false;
+        }
+           if(apost<1 || dpost<apost+2 || dpost+2>=nam.length)
+        {
+           alert("Please enter a valid e-mail address");
+           return false;
+        }
+		 if (password != repassword) {
+                    alert ("Password did not match, Please try again...")
+                    return false;
+		}
+        
+      return true;
+   }
+    </script>
+
+   
+  <body>
+  
+   <form class="aryaan"  method="post">
+   
+   <div class="arn" style="background-color:#f1f1f1">
+   
+    <h1 style="text-align:center;"> REGISTRATION </h1><br>
+         
+   <input type="text" name="firstname" id="name" placeholder="First Name" required>   
+             
+   <input type="text" name="lastname" placeholder="Last Name" required> 
+   
+   <input type="email" name="email" id="email" placeholder="Email" required>
+   
+   <label>
+   Gender :  
+   </label><br>  
+   <input type="radio" value="Male" name="gender" checked > Male   
+   <input type="radio" value="Female" name="gender"> Female   
+   <input type="radio" value="Other" name="gender"> Other  
+   
+   <input type="password" name="password" id="password" placeholder="Password" required>
+   <input type="password" placeholder="Retype Password" name="pass" required><br>
+   
+   <input type="submit" name="" placeholder="Register">
+   
+     	<p><a href="Java_login.html">Sign in instead</a></p>
+	
+  </div>
+  
+   </form>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+   <script src="main.js"></script>
+  </body>
+</html>
