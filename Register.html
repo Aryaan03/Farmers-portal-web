@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
+   
   <meta charset="utf-8">
   <title> Registration Form </title>
   <link rel="stylesheet" href="style.css" type="text/css">
@@ -111,7 +112,7 @@
    
   <body>
   
-   <form class="aryaan"  method="post">
+   <form class="aryaan" id="signupForm"  method="post">
    
    <div class="arn" style="background-color:#f1f1f1">
    
@@ -141,6 +142,24 @@
   
    </form>
    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+   <script>
+   var config = {
+      apiKey: "AIzaSyAhhdZij4A7sbATb0cdSf-Um8ZtS-GIqBM",
+      authDomain: "farmersportal-b1d87.firebaseapp.com",
+      databaseURL: "https://farmersportal-b1d87-default-rtdb.firebaseio.com",
+      projectId: "farmersportal-b1d87",
+      storageBucket: "farmersportal-b1d87.appspot.com",
+      messagingSenderId: "213265871299",
+      appId: "1:213265871299:web:2a018df02bd47daa1d0d76",
+      measurementId: "G-JQFQK62JJW"
+    };
+    firebase.initializeApp(config);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
    <script src="main.js"></script>
   </body>
 </html>
