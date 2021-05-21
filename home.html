@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>
+            Home
+        </title>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+        
+    </head>
+    <link rel="stylesheet" href="home.css">
+    <body>
+        <div class="nav_bar">
+            <ul class="nav_list">
+                <a href=Welcome.html style="color: rgb(255, 255, 255); font-size: 23px; text-decoration: none;"><li style="cursor:pointer">WELCOME</li></a>
+                <a href=developers.html style="color: rgb(255, 255, 255); font-size: 23px; text-decoration: none;"><li style="cursor:pointer">DEVELOPERS</li></a>
+                <li><a href=cart.html style="color: rgb(255, 255, 255); font-size: 23px; text-decoration: none;">CART</a></li>
+                <a href=Login.html style="color: rgb(255, 255, 255); font-size: 23px; text-decoration: none;"><li id="loginNamehh" style="cursor:pointer"></li></a>
+                <a href=Register.html style="color: rgb(255, 255, 255); font-size: 23px; text-decoration: none;"><li id="loginNameh" style="cursor:pointer"></li></a>
+                <li id="loginNamehhh" onclick="llogout()" style="cursor:pointer"></li>
+                <li class="search">
+                    <form id="form"> 
+                        <input type="search" id="query" name="q" placeholder=" Search..." class="search1">
+                        <button class="button">Search</button>
+                      </form>
+                </li>
+            </ul>
+        </div>
+        <div class="empty">
+            <ul class="empty_list">
+                <li class="photo"><img src="groot.jpg" class="image2"></li><br><br>
+                <li id="userhello"></li>
+                <li id="userNmae"></li><br><br><br>
+                <li id="signinas"></li><br>
+                <li id="signinemail"></li><br>
+            </ul>
+        </div>
+        <div class="items">
+            
+        </div>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var config = {
+              apiKey: "AIzaSyAr5F5qON9xP06P-a4_KModsgM7omUpzUY",
+              authDomain: "myapp-dd89c.firebaseapp.com",
+              projectId: "myapp-dd89c",
+              storageBucket: "myapp-dd89c.appspot.com",
+              messagingSenderId: "468182946431",
+              appId: "1:468182946431:web:6df8bd780889d133ce654a",
+              measurementId: "G-25VW1TP5J2"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(config);
+            const auth = firebase.auth();
+                      const db = firebase.firestore();
+                      db.settings({ timestampsInSnapshots: true }); 
+          </script>
+<script src="home.js"></script> 
+<script src="login.js"></script>
+<script src="login1.js"></script>         
+    </body>
+</html>

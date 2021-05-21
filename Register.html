@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title> Registration Form </title>
+  
+  </head>
+  
+  <style>
+   body{
+   padding: 0;
+   font-family: sans-serif;
+   background: #89b4df;
+   }
+   
+   .content1 {
+    background-image: url(3.png);
+    height: 650px;
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    margin-left: 700px;
+    animation: up 1s linear, 
+    down 1s 1s linear;
+    }
+
+
+   .arn {
+   width:300px;
+   padding:40px;
+   position:absolute;
+   top:60%;
+   left:20%;   
+   transform: translate(-50%,-50%);
+   background:#191919;
+   text-align:center;
+   }
+   
+   .aryaan {
+   font-family: Calisto MT;
+   font-weight:500;
+   border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   padding: 14px 50px;
+   width:250px;
+   outline:none;
+   color: #000000;
+   border-radius:24px;   
+   }
+   
+   .arn input[type="email"],.arn input[type="text"],.arn input[type="password"]{
+   border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   border:2px solid #3498db;
+   padding: 14px 10px;
+   width:200px;
+   outline:none;
+   color:black;
+   border-radius:24px;
+   transition:0.25s;
+   }
+   
+   .arn input[type="email"]:focus,.arn input[type="text"]:focus,.arn input[type="password"]:focus{
+   width:280px;
+   border-color: #ff0000;
+   }
+   
+   .arn input[type="Submit"]{
+    border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   border:2px solid #2ecc71;
+   padding: 14px 40px;
+   outline:none;
+   color:black;
+   border-radius:24px;
+   transition:0.25s;
+   cursor:pointer;
+   }
+   
+   .arn input[type="Submit"]:hover{
+   background:#2ecc71;
+   }
+
+   @keyframes up {
+    from {
+        transform: translateY(1000px);
+    }
+    to {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes down {
+    from {
+        transform: translateY(-40px);
+    }
+    to {
+        transform: translateY(-0px);
+    }
+}
+   </style>
+   
+   <script>
+      
+    </script>
+
+   
+  <body>
+  <div class="content1"></div>
+   <form class="aryaan" name="signupForm" id="signupForm" action="home.html" method="post" onsubmit="return (validate())">
+   
+   <div class="arn" style="background-color:#f1f1f1">
+   
+    <h1 style="text-align:center;"> REGISTRATION </h1><br>
+         
+   <input type="text" name="firstname" id="name" placeholder="First Name" required>   
+             
+   <input type="text" name="lastname" placeholder="Last Name" required> 
+   
+   <input type="email" name="email" id="email" placeholder="Email" required>
+   
+   <label>
+   Gender :  
+   </label><br>  
+   <input type="radio" value="Male" name="gender" checked > Male   
+   <input type="radio" value="Female" name="gender"> Female   
+   <input type="radio" value="Other" name="gender"> Other  
+   
+   <input type="password" name="password" id="password" placeholder="Password" required>
+   <input type="password" placeholder="Retype Password" name="pass" required><br>
+   
+   <input type="submit" name="" placeholder="Register">
+   <p class="error" style="color: pink;text-align: center"></p>
+     	<p><a href="Login.html">Sign in instead</a></p>
+       <p class="error" style="color:red;text-align: center"></p>
+  </div>
+  
+   </form>
+   
+   <script>
+   var config = {
+    apiKey: "AIzaSyAr5F5qON9xP06P-a4_KModsgM7omUpzUY",
+    authDomain: "myapp-dd89c.firebaseapp.com",
+    projectId: "myapp-dd89c",
+    storageBucket: "myapp-dd89c.appspot.com",
+    messagingSenderId: "468182946431",
+    appId: "1:468182946431:web:6df8bd780889d133ce654a",
+    measurementId: "G-25VW1TP5J2"
+  };
+    firebase.initializeApp(config);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+   <script src="login.js"></script>
+  </body>
+</html>
