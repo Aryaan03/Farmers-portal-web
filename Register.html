@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
  <head>
+<<<<<<< HEAD
    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title> Registration Form </title>
   
+=======
+   
+  <meta charset="utf-8">
+  <title> Registration Form </title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
   </head>
   
   <style>
    body{
    padding: 0;
    font-family: sans-serif;
+<<<<<<< HEAD
    background: #89b4df;
    }
    
@@ -27,12 +35,21 @@
     }
 
 
+=======
+   background: #34495e;
+   }
+   
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
    .arn {
    width:300px;
    padding:40px;
    position:absolute;
    top:60%;
+<<<<<<< HEAD
    left:20%;   
+=======
+   left:50%;   
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
    transform: translate(-50%,-50%);
    background:#191919;
    text-align:center;
@@ -91,6 +108,7 @@
    .arn input[type="Submit"]:hover{
    background:#2ecc71;
    }
+<<<<<<< HEAD
 
    @keyframes up {
     from {
@@ -113,12 +131,48 @@
    
    <script>
       
+=======
+   </style>
+   
+   <script>
+      function validate()
+      {
+ 
+      var password = document.myform.password.value;
+	  var repassword = document.myform.password.value;
+      var name = document.myform.uname.value;
+      var apost = name.indexOf("@");
+      var dpost = name.lastindexOf(".");
+
+            if(password.length<7)
+        {
+           alert("Password must have minimum 7 Characters");
+           return false;
+        }
+           if(apost<1 || dpost<apost+2 || dpost+2>=nam.length)
+        {
+           alert("Please enter a valid e-mail address");
+           return false;
+        }
+		 if (password != repassword) {
+                    alert ("Password did not match, Please try again...")
+                    return false;
+		}
+        
+      return true;
+   }
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
     </script>
 
    
   <body>
+<<<<<<< HEAD
   <div class="content1"></div>
    <form class="aryaan" name="signupForm" id="signupForm" action="home.html" method="post" onsubmit="return (validate())">
+=======
+  
+   <form class="aryaan" id="signupForm"  method="post">
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
    
    <div class="arn" style="background-color:#f1f1f1">
    
@@ -141,6 +195,7 @@
    <input type="password" placeholder="Retype Password" name="pass" required><br>
    
    <input type="submit" name="" placeholder="Register">
+<<<<<<< HEAD
    <p class="error" style="color: pink;text-align: center"></p>
      	<p><a href="Login.html">Sign in instead</a></p>
        <p class="error" style="color:red;text-align: center"></p>
@@ -158,11 +213,37 @@
     appId: "1:468182946431:web:6df8bd780889d133ce654a",
     measurementId: "G-25VW1TP5J2"
   };
+=======
+   
+     	<p><a href="Java_login.html">Sign in instead</a></p>
+	
+  </div>
+  
+   </form>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+   <script>
+   var config = {
+      apiKey: "AIzaSyAhhdZij4A7sbATb0cdSf-Um8ZtS-GIqBM",
+      authDomain: "farmersportal-b1d87.firebaseapp.com",
+      databaseURL: "https://farmersportal-b1d87-default-rtdb.firebaseio.com",
+      projectId: "farmersportal-b1d87",
+      storageBucket: "farmersportal-b1d87.appspot.com",
+      messagingSenderId: "213265871299",
+      appId: "1:213265871299:web:2a018df02bd47daa1d0d76",
+      measurementId: "G-JQFQK62JJW"
+    };
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
     firebase.initializeApp(config);
     const auth = firebase.auth();
     const db = firebase.firestore();
     db.settings({ timestampsInSnapshots: true });
   </script>
+<<<<<<< HEAD
    <script src="login.js"></script>
+=======
+   <script src="main.js"></script>
+>>>>>>> 6be23741258d2b7f96f06e790df46e0e8ccd005b
   </body>
 </html>
