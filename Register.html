@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
  <head>
-   
-  <meta charset="utf-8">
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title> Registration Form </title>
-  <link rel="stylesheet" href="style.css" type="text/css">
+  
   </head>
   
   <style>
    body{
    padding: 0;
    font-family: sans-serif;
-   background: #34495e;
+   background: #89b4df;
    }
    
+   .content1 {
+    background-image: url(3.png);
+    height: 650px;
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    margin-left: 700px;
+    animation: up 1s linear, 
+    down 1s 1s linear;
+    }
+
+
    .arn {
    width:300px;
    padding:40px;
    position:absolute;
    top:60%;
-   left:50%;   
+   left:20%;   
    transform: translate(-50%,-50%);
    background:#191919;
    text-align:center;
@@ -78,41 +91,34 @@
    .arn input[type="Submit"]:hover{
    background:#2ecc71;
    }
+
+   @keyframes up {
+    from {
+        transform: translateY(1000px);
+    }
+    to {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes down {
+    from {
+        transform: translateY(-40px);
+    }
+    to {
+        transform: translateY(-0px);
+    }
+}
    </style>
    
    <script>
-      function validate()
-      {
- 
-      var password = document.myform.password.value;
-	  var repassword = document.myform.password.value;
-      var name = document.myform.uname.value;
-      var apost = name.indexOf("@");
-      var dpost = name.lastindexOf(".");
-
-            if(password.length<7)
-        {
-           alert("Password must have minimum 7 Characters");
-           return false;
-        }
-           if(apost<1 || dpost<apost+2 || dpost+2>=nam.length)
-        {
-           alert("Please enter a valid e-mail address");
-           return false;
-        }
-		 if (password != repassword) {
-                    alert ("Password did not match, Please try again...")
-                    return false;
-		}
-        
-      return true;
-   }
+      
     </script>
 
    
   <body>
-  
-   <form class="aryaan" id="signupForm"  method="post">
+  <div class="content1"></div>
+   <form class="aryaan" name="signupForm" id="signupForm" action="home.html" method="post" onsubmit="return (validate())">
    
    <div class="arn" style="background-color:#f1f1f1">
    
@@ -135,31 +141,28 @@
    <input type="password" placeholder="Retype Password" name="pass" required><br>
    
    <input type="submit" name="" placeholder="Register">
-   
-     	<p><a href="Java_login.html">Sign in instead</a></p>
-	
+   <p class="error" style="color: pink;text-align: center"></p>
+     	<p><a href="Login.html">Sign in instead</a></p>
+       <p class="error" style="color:red;text-align: center"></p>
   </div>
   
    </form>
-   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+   
    <script>
    var config = {
-      apiKey: "AIzaSyAhhdZij4A7sbATb0cdSf-Um8ZtS-GIqBM",
-      authDomain: "farmersportal-b1d87.firebaseapp.com",
-      databaseURL: "https://farmersportal-b1d87-default-rtdb.firebaseio.com",
-      projectId: "farmersportal-b1d87",
-      storageBucket: "farmersportal-b1d87.appspot.com",
-      messagingSenderId: "213265871299",
-      appId: "1:213265871299:web:2a018df02bd47daa1d0d76",
-      measurementId: "G-JQFQK62JJW"
-    };
+    apiKey: "AIzaSyAr5F5qON9xP06P-a4_KModsgM7omUpzUY",
+    authDomain: "myapp-dd89c.firebaseapp.com",
+    projectId: "myapp-dd89c",
+    storageBucket: "myapp-dd89c.appspot.com",
+    messagingSenderId: "468182946431",
+    appId: "1:468182946431:web:6df8bd780889d133ce654a",
+    measurementId: "G-25VW1TP5J2"
+  };
     firebase.initializeApp(config);
     const auth = firebase.auth();
     const db = firebase.firestore();
     db.settings({ timestampsInSnapshots: true });
   </script>
-   <script src="main.js"></script>
+   <script src="login.js"></script>
   </body>
 </html>

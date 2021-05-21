@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: navajowhite;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>This project is made by second year IT B.tech Students.</p>
+  <p>A platform for farmers and consumers to directly interact, organized way to sell his produce at the best price and the consumer get the best product at the best price.</p>
+</div>
+
+<h2 style="text-align:center"> Our Team </h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Aaryan" style="width:100%">
+      <div class="container">
+        <h2>Aaryan Shaikh</h2>
+        <p class="title">Developer</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+        <p>aryaan.21910912@viit.ac.in</p>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="omgujarathi.jpeg" alt="Om" style="width:100%">
+      <div class="container">
+        <h2>Om Gujarathi</h2>
+        <p class="title">Developer</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+        <p>om.21910010@viit.ac.in</p>
+  
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Hrithik Singh" style="width:100%">
+      <div class="container">
+        <h2>Hrithik Singh</h2>
+        <p class="title">Developer</p>
+        <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+        <p>singh.21910952@viit.ac.in</p>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+  <div class="card">
+    <img src="omjain.jpeg" alt="Om" style="width:100%">
+    <div class="container">
+      <h2>Om Jain</h2>
+      <p class="title">Developer</p>
+      <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
+      <p>om.21910089@viit.ac.in</p>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html lang="en">
+    
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="cart.css">
+    
+    <title>cart</title>
+    </head>
+    <body>
+      <div class="nav_bar">
+        <ul class="nav_list">
+            <li><a href=home.html style="color:greenyellow"; font-size: 35px; text-decoration: none;padding-left: 50px;">HOME</a></li>
+            <li class="cartname">cart</li>
+        </ul>
+      </div>
+        <br><br>
+        <div class="shopping-cart">
+        
+          <div class="column-labels">
+            <label class="product-image">Image</label>
+            <label class="product-details">Product</label>
+            <label class="product-price">Price</label>
+            <label class="product-quantity">Quantity in kg</label>
+            <label class="product-removal">Remove</label>
+            <label class="product-line-price">Total</label>
+          </div>
+        
+          
+          <div class="products"></div>
+          
+          <div class="totals">
+            <div class="totals-item">
+              <label>Subtotal</label>
+              <div class="totals-value" id="cart-subtotal">00.00</div>
+            </div>
+            <div class="totals-item">
+              <label>Tax (5%)</label>
+              <div class="totals-value" id="cart-tax">0.00</div>
+            </div>
+            <div class="totals-item">
+              <label>Shipping</label>
+              <div class="totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+              <label>Grand Total</label>
+              <div class="totals-value" id="cart-total">00.00</div>
+            </div>
+          </div>
+              
+              <button class="checkout">Checkout</button>
+        
+        </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAr5F5qON9xP06P-a4_KModsgM7omUpzUY",
+    authDomain: "myapp-dd89c.firebaseapp.com",
+    projectId: "myapp-dd89c",
+    storageBucket: "myapp-dd89c.appspot.com",
+    messagingSenderId: "468182946431",
+    appId: "1:468182946431:web:6df8bd780889d133ce654a",
+    measurementId: "G-25VW1TP5J2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+</script>
+
+        
+<script src="cart.js"></script>
+</body>
+  </html>
